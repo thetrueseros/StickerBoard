@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cmbSticker = new System.Windows.Forms.ComboBox();
+            this.tipoStickerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.nudY = new System.Windows.Forms.NumericUpDown();
             this.nudX = new System.Windows.Forms.NumericUpDown();
             this.nudSize = new System.Windows.Forms.NumericUpDown();
@@ -45,17 +47,21 @@
             this.lblCantFiguras = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.tipoStickerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoStickerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLienzo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbSticker
             // 
             this.cmbSticker.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbSticker.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbSticker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSticker.FormattingEnabled = true;
             this.cmbSticker.Items.AddRange(new object[] {
@@ -64,13 +70,21 @@
             this.cmbSticker.Location = new System.Drawing.Point(46, 90);
             this.cmbSticker.Name = "cmbSticker";
             this.cmbSticker.Size = new System.Drawing.Size(121, 21);
-            this.cmbSticker.Sorted = true;
             this.cmbSticker.TabIndex = 0;
-            this.cmbSticker.Tag = "";
+            this.cmbSticker.Tag = "(Seleccione)";
+            // 
+            // tipoStickerBindingSource2
+            // 
+            this.tipoStickerBindingSource2.DataSource = typeof(StickerBoard.StickerFactory.TipoSticker);
             // 
             // nudY
             // 
             this.nudY.Location = new System.Drawing.Point(117, 226);
+            this.nudY.Maximum = new decimal(new int[] {
+            487,
+            0,
+            0,
+            0});
             this.nudY.Name = "nudY";
             this.nudY.Size = new System.Drawing.Size(50, 20);
             this.nudY.TabIndex = 2;
@@ -78,6 +92,11 @@
             // nudX
             // 
             this.nudX.Location = new System.Drawing.Point(46, 226);
+            this.nudX.Maximum = new decimal(new int[] {
+            858,
+            0,
+            0,
+            0});
             this.nudX.Name = "nudX";
             this.nudX.Size = new System.Drawing.Size(50, 20);
             this.nudX.TabIndex = 3;
@@ -85,6 +104,11 @@
             // nudSize
             // 
             this.nudSize.Location = new System.Drawing.Point(47, 306);
+            this.nudSize.Maximum = new decimal(new int[] {
+            7000,
+            0,
+            0,
+            0});
             this.nudSize.Name = "nudSize";
             this.nudSize.Size = new System.Drawing.Size(120, 20);
             this.nudSize.TabIndex = 4;
@@ -200,6 +224,15 @@
             this.btnLimpiar.TabIndex = 16;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // tipoStickerBindingSource
+            // 
+            this.tipoStickerBindingSource.DataSource = typeof(StickerBoard.StickerFactory.TipoSticker);
+            // 
+            // tipoStickerBindingSource1
+            // 
+            this.tipoStickerBindingSource1.DataSource = typeof(StickerBoard.StickerFactory.TipoSticker);
             // 
             // Form1
             // 
@@ -222,16 +255,21 @@
             this.Controls.Add(this.nudX);
             this.Controls.Add(this.nudY);
             this.Controls.Add(this.cmbSticker);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1200, 700);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "Form1";
             this.Text = "StickerBoard";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLienzo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,6 +294,9 @@
         private System.Windows.Forms.Label lblCantFiguras;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.BindingSource tipoStickerBindingSource;
+        private System.Windows.Forms.BindingSource tipoStickerBindingSource1;
+        private System.Windows.Forms.BindingSource tipoStickerBindingSource2;
     }
 }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static StickerBoard.StickerFactory;
 
 namespace StickerBoard
 {
@@ -32,12 +33,23 @@ namespace StickerBoard
 
         private void pbLienzo_Paint(object sender, PaintEventArgs e)
         {
-            btnCrear_Click(sender, e);
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+            if (cmbSticker.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un tipo de sticker.","¡Error!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            Sticker sticker = StickerFactory.CrearSticker((TipoSticker)cmbSticker.SelectedIndex,
+                (int)nudX.Value, (int)nudY.Value, (int)nudSize.Value, 
+                pbColor.BackColor);
+            sticker.Dibujar(pbLienzo.CreateGraphics(), sticker.PosX, sticker.PosY, sticker.Tamaño, sticker.Color);
+        }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            pbLienzo.Invalidate();
         }
     }
 }
