@@ -32,6 +32,19 @@ namespace StickerBoard.Entities
                 new PointF(posX, posY + tamaño * 0.35f),
                 new PointF(posX + tamaño * 0.39f, posY + tamaño * 0.35f)
             });
+            g.DrawPolygon(Pens.Black, new PointF[]
+            {
+                new PointF(posX + tamaño * 0.5f, posY),
+                new PointF(posX + tamaño * 0.61f, posY + tamaño * 0.35f),
+                new PointF(posX + tamaño, posY + tamaño * 0.35f),
+                new PointF(posX + tamaño * 0.68f, posY + tamaño * 0.57f),
+                new PointF(posX + tamaño * 0.79f, posY + tamaño),
+                new PointF(posX + tamaño * 0.5f, posY + tamaño * 0.72f),
+                new PointF(posX + tamaño * 0.21f, posY + tamaño),
+                new PointF(posX + tamaño * 0.32f, posY + tamaño * 0.57f),
+                new PointF(posX, posY + tamaño * 0.35f),
+                new PointF(posX + tamaño * 0.39f, posY + tamaño * 0.35f)
+            });
         }
         public override bool Validar(int posX, int posY, int tamaño, PictureBox pbLienzo)
         {

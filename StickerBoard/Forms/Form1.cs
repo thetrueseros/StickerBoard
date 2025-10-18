@@ -43,7 +43,7 @@ namespace StickerBoard.Forms
                 MessageBox.Show("Seleccione un tipo de sticker.", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            Sticker sticker = StickerFactory.CrearSticker((Factory.StickerFactory.TipoSticker)cmbSticker.SelectedIndex,
+            Sticker sticker = StickerFactory.CrearSticker((StickerFactory.TipoSticker)cmbSticker.SelectedIndex,
                 (int)nudX.Value, (int)nudY.Value, (int)nudSize.Value,
                 pbColor.BackColor);
             if (sticker.Tamaño <= 0)
