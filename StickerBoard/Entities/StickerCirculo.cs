@@ -18,6 +18,7 @@ namespace StickerBoard.Entities
         public override void Dibujar(Graphics g, int posX, int posY, int tamaño, Color color)
         {
             SolidBrush b = new SolidBrush(color);
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             g.FillEllipse(b, posX, posY, tamaño, tamaño);
             g.DrawEllipse(Pens.Black, posX, posY, tamaño, tamaño);
             g.Dispose();

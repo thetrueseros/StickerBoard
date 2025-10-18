@@ -19,6 +19,7 @@ namespace StickerBoard.Entities
         public override void Dibujar(Graphics g, int posX, int posY, int tamaño, Color color)
         {
             SolidBrush b = new SolidBrush(color);
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             g.FillPolygon(b, new PointF[]
             {
                 new PointF(posX + tamaño * 0.5f, posY),
