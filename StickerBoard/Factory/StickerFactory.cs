@@ -13,7 +13,9 @@ namespace StickerBoard.Factory
         public enum TipoSticker
         {
             Circulo,
-            Rectangulo
+            Rectangulo,
+            Estrella,
+            Nube
         }
         /// <summary>
         /// Método de Factory para crear stickers.
@@ -26,6 +28,10 @@ namespace StickerBoard.Factory
                     return new StickerCirculo(posX, posY, tamaño, color);
                 case TipoSticker.Rectangulo:
                     return new StickerRectangulo(posX, posY, tamaño, color);
+                case TipoSticker Estrella:
+                    return new StickerEstrella(posX, posY, tamaño, color);
+                /*case TipoSticker Nube:
+                    return new StickerNube(posX, posY, tamaño, color);*/
                 default:
                     Console.WriteLine("Tipo de sticker no reconocido.");
                     return null;

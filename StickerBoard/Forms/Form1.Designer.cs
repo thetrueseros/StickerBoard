@@ -64,7 +64,9 @@ namespace StickerBoard.Forms
             this.cmbSticker.FormattingEnabled = true;
             this.cmbSticker.Items.AddRange(new object[] {
             "Circulo",
-            "Rectangulo"});
+            "Rectangulo",
+            "Estrella",
+            "Nube"});
             this.cmbSticker.Location = new System.Drawing.Point(46, 90);
             this.cmbSticker.Name = "cmbSticker";
             this.cmbSticker.Size = new System.Drawing.Size(121, 21);

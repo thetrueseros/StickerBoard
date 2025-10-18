@@ -17,7 +17,6 @@ namespace StickerBoard.Entities
         }
         public override void Dibujar(Graphics g, int posX, int posY, int tamaño, Color color)
         {
-            //Graphics g = Graphics.FromImage(bmp); (tener en cuenta para Factory o interfaz)
             SolidBrush b = new SolidBrush(color);
             g.FillRectangle(b, posX, posY, tamaño * 2, tamaño);
             g.DrawRectangle(Pens.Black, posX, posY, tamaño * 2, tamaño);
@@ -30,7 +29,7 @@ namespace StickerBoard.Entities
                 posX + (tamaño * 2) > 858 /*ancho del lienzo*/ ||
                 posY + tamaño > 487 /*alto del lienzo*/)
             {
-                MessageBox.Show("Su sticker se sale de los límites del lienzo." +
+                MessageBox.Show("Su sticker se sale de los límites del lienzo. " +
                     "El sticker DEBE caber entero en él.", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
