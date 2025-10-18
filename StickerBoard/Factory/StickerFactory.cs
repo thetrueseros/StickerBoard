@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StickerBoard.Entities;
+using StickerBoard.Forms;
 
-namespace StickerBoard
+namespace StickerBoard.Factory
 {
     public class StickerFactory
     {
@@ -22,7 +24,8 @@ namespace StickerBoard
                 case TipoSticker.Rectangulo:
                     return new StickerRectangulo(posX, posY, tamaño, color);
                 default:
-                    throw new ArgumentException("Tipo de sticker no válido");
+                    Console.WriteLine("Tipo de sticker no reconocido.");
+                    return null;
             }
         }
     }

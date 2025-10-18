@@ -7,9 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static StickerBoard.StickerFactory;
+using StickerBoard.Factory;
+using StickerBoard.Entities;
 
-namespace StickerBoard
+namespace StickerBoard.Forms
 {
     public partial class Form1 : Form
     {
@@ -39,14 +40,20 @@ namespace StickerBoard
         {
             if (cmbSticker.SelectedIndex == -1)
             {
-                MessageBox.Show("Seleccione un tipo de sticker.","¡Error!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione un tipo de sticker.", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            Sticker sticker = StickerFactory.CrearSticker((TipoSticker)cmbSticker.SelectedIndex,
-                (int)nudX.Value, (int)nudY.Value, (int)nudSize.Value, 
+            Sticker sticker = StickerFactory.CrearSticker((Factory.StickerFactory.TipoSticker)cmbSticker.SelectedIndex,
+                (int)nudX.Value, (int)nudY.Value, (int)nudSize.Value,
                 pbColor.BackColor);
-            sticker.Dibujar(pbLienzo.CreateGraphics(), sticker.PosX, sticker.PosY, sticker.Tamaño, sticker.Color);
-            if (sticker.Tamaño > 0)
+            if (sticker.Tamaño <= 0)
             {
+                MessageBox.Show("Tamaño inválido.", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (sticker.Validar((int)nudX.Value, (int)nudY.Value, (int)nudSize.Value, pbLienzo))
+            {
+                sticker.Dibujar(pbLienzo.CreateGraphics(), sticker.PosX, sticker.PosY, sticker.Tamaño, sticker.Color);
                 txtContador.Text = (int.Parse(txtContador.Text) + 1).ToString();
             }
         }

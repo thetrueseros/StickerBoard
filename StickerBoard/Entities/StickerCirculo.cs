@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Forms;
 using System.Text;
 using System.Threading.Tasks;
+using StickerBoard.Entities;
+using StickerBoard.Factory;
 
-namespace StickerBoard
+namespace StickerBoard.Entities
 {
     public class StickerCirculo : Sticker
     {
@@ -19,6 +22,18 @@ namespace StickerBoard
             g.FillEllipse(b, posX, posY, tamaño, tamaño);
             g.DrawEllipse(Pens.Black, posX, posY, tamaño, tamaño);
             g.Dispose();
+        }
+        public override bool Validar(int posX, int posY, int tamaño, PictureBox pbLienzo)
+        {
+            if (posX < 0 || posY < 0 ||
+                posX + tamaño > 858 /*ancho del lienzo*/ ||
+                posY + tamaño > 487 /*alto del lienzo*/)
+            {
+                MessageBox.Show("Su sticker es muy grande." +
+                    "El sticker DEBE caber entero en el lienzo.", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }

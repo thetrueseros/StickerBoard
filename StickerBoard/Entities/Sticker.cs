@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using StickerBoard.Factory;
+using StickerBoard.Entities;
+using System.Windows.Forms;
+using StickerBoard.Forms;
 
-namespace StickerBoard
+namespace StickerBoard.Entities
 {
+
     public abstract class Sticker
     {
         // Propiedades protegidas accesibles por las clases derivadas
@@ -32,5 +37,6 @@ namespace StickerBoard
 
         // Cada subclase debe implementar cómo se dibuja usando Graphics
         public abstract void Dibujar(Graphics g, int posX, int posY, int tamaño, Color color);
+        public abstract bool Validar(int posX, int posY, int tamaño, PictureBox pbLienzo);
     }
 }

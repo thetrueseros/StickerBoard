@@ -1,5 +1,9 @@
-﻿namespace StickerBoard
+﻿using System.Windows.Forms;
+using StickerBoard.Factory;
+using StickerBoard.Entities;
+namespace StickerBoard.Forms
 {
+
     partial class Form1
     {
         /// <summary>
@@ -65,8 +69,8 @@
             this.cmbSticker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSticker.FormattingEnabled = true;
             this.cmbSticker.Items.AddRange(new object[] {
-            "Circulo",
-            "Rectangulo"});
+        "Circulo",
+        "Rectangulo"});
             this.cmbSticker.Location = new System.Drawing.Point(46, 90);
             this.cmbSticker.Name = "cmbSticker";
             this.cmbSticker.Size = new System.Drawing.Size(121, 21);
@@ -75,16 +79,16 @@
             // 
             // tipoStickerBindingSource2
             // 
-            this.tipoStickerBindingSource2.DataSource = typeof(StickerBoard.StickerFactory.TipoSticker);
+            this.tipoStickerBindingSource2.DataSource = typeof(StickerBoard.Factory.StickerFactory.TipoSticker);
             // 
             // nudY
             // 
             this.nudY.Location = new System.Drawing.Point(117, 226);
             this.nudY.Maximum = new decimal(new int[] {
-            487,
-            0,
-            0,
-            0});
+        487,
+        0,
+        0,
+        0});
             this.nudY.Name = "nudY";
             this.nudY.Size = new System.Drawing.Size(50, 20);
             this.nudY.TabIndex = 2;
@@ -93,10 +97,10 @@
             // 
             this.nudX.Location = new System.Drawing.Point(46, 226);
             this.nudX.Maximum = new decimal(new int[] {
-            858,
-            0,
-            0,
-            0});
+        858,
+        0,
+        0,
+        0});
             this.nudX.Name = "nudX";
             this.nudX.Size = new System.Drawing.Size(50, 20);
             this.nudX.TabIndex = 3;
@@ -105,10 +109,10 @@
             // 
             this.nudSize.Location = new System.Drawing.Point(47, 306);
             this.nudSize.Maximum = new decimal(new int[] {
-            7000,
-            0,
-            0,
-            0});
+        7000,
+        0,
+        0,
+        0});
             this.nudSize.Name = "nudSize";
             this.nudSize.Size = new System.Drawing.Size(120, 20);
             this.nudSize.TabIndex = 4;
@@ -229,11 +233,11 @@
             // 
             // tipoStickerBindingSource
             // 
-            this.tipoStickerBindingSource.DataSource = typeof(StickerBoard.StickerFactory.TipoSticker);
+            this.tipoStickerBindingSource.DataSource = typeof(StickerBoard.Factory.StickerFactory.TipoSticker);
             // 
             // tipoStickerBindingSource1
             // 
-            this.tipoStickerBindingSource1.DataSource = typeof(StickerBoard.StickerFactory.TipoSticker);
+            this.tipoStickerBindingSource1.DataSource = typeof(StickerBoard.Factory.StickerFactory.TipoSticker);
             // 
             // Form1
             // 
@@ -300,4 +304,3 @@
         private System.Windows.Forms.BindingSource tipoStickerBindingSource2;
     }
 }
-
