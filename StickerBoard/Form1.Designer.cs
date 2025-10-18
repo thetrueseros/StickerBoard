@@ -152,6 +152,7 @@
             this.txtContador.ReadOnly = true;
             this.txtContador.Size = new System.Drawing.Size(100, 20);
             this.txtContador.TabIndex = 8;
+            this.txtContador.Text = "0";
             // 
             // lblTipoFigura
             // 
@@ -212,9 +213,9 @@
             this.lblCantFiguras.AutoSize = true;
             this.lblCantFiguras.Location = new System.Drawing.Point(325, 586);
             this.lblCantFiguras.Name = "lblCantFiguras";
-            this.lblCantFiguras.Size = new System.Drawing.Size(101, 13);
+            this.lblCantFiguras.Size = new System.Drawing.Size(106, 13);
             this.lblCantFiguras.TabIndex = 15;
-            this.lblCantFiguras.Text = "Cantidad de figuras:";
+            this.lblCantFiguras.Text = "Cantidad de stickers:";
             // 
             // btnLimpiar
             // 

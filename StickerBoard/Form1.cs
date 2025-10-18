@@ -45,11 +45,16 @@ namespace StickerBoard
                 (int)nudX.Value, (int)nudY.Value, (int)nudSize.Value, 
                 pbColor.BackColor);
             sticker.Dibujar(pbLienzo.CreateGraphics(), sticker.PosX, sticker.PosY, sticker.Tamaño, sticker.Color);
+            if (sticker.Tamaño > 0)
+            {
+                txtContador.Text = (int.Parse(txtContador.Text) + 1).ToString();
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             pbLienzo.Invalidate();
+            txtContador.Text = "0";
         }
     }
 }
