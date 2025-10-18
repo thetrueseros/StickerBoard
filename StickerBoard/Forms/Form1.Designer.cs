@@ -32,9 +32,7 @@ namespace StickerBoard.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.cmbSticker = new System.Windows.Forms.ComboBox();
-            this.tipoStickerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.nudY = new System.Windows.Forms.NumericUpDown();
             this.nudX = new System.Windows.Forms.NumericUpDown();
             this.nudSize = new System.Windows.Forms.NumericUpDown();
@@ -51,16 +49,11 @@ namespace StickerBoard.Forms
             this.lblCantFiguras = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.tipoStickerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoStickerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLienzo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbSticker
@@ -69,26 +62,22 @@ namespace StickerBoard.Forms
             this.cmbSticker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSticker.FormattingEnabled = true;
             this.cmbSticker.Items.AddRange(new object[] {
-        "Circulo",
-        "Rectangulo"});
+            "Circulo",
+            "Rectangulo"});
             this.cmbSticker.Location = new System.Drawing.Point(46, 90);
             this.cmbSticker.Name = "cmbSticker";
             this.cmbSticker.Size = new System.Drawing.Size(121, 21);
             this.cmbSticker.TabIndex = 0;
             this.cmbSticker.Tag = "(Seleccione)";
             // 
-            // tipoStickerBindingSource2
-            // 
-            this.tipoStickerBindingSource2.DataSource = typeof(StickerBoard.Factory.StickerFactory.TipoSticker);
-            // 
             // nudY
             // 
             this.nudY.Location = new System.Drawing.Point(117, 226);
             this.nudY.Maximum = new decimal(new int[] {
-        487,
-        0,
-        0,
-        0});
+            487,
+            0,
+            0,
+            0});
             this.nudY.Name = "nudY";
             this.nudY.Size = new System.Drawing.Size(50, 20);
             this.nudY.TabIndex = 2;
@@ -97,10 +86,10 @@ namespace StickerBoard.Forms
             // 
             this.nudX.Location = new System.Drawing.Point(46, 226);
             this.nudX.Maximum = new decimal(new int[] {
-        858,
-        0,
-        0,
-        0});
+            858,
+            0,
+            0,
+            0});
             this.nudX.Name = "nudX";
             this.nudX.Size = new System.Drawing.Size(50, 20);
             this.nudX.TabIndex = 3;
@@ -109,10 +98,10 @@ namespace StickerBoard.Forms
             // 
             this.nudSize.Location = new System.Drawing.Point(47, 306);
             this.nudSize.Maximum = new decimal(new int[] {
-        7000,
-        0,
-        0,
-        0});
+            7000,
+            0,
+            0,
+            0});
             this.nudSize.Name = "nudSize";
             this.nudSize.Size = new System.Drawing.Size(120, 20);
             this.nudSize.TabIndex = 4;
@@ -231,14 +220,6 @@ namespace StickerBoard.Forms
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // tipoStickerBindingSource
-            // 
-            this.tipoStickerBindingSource.DataSource = typeof(StickerBoard.Factory.StickerFactory.TipoSticker);
-            // 
-            // tipoStickerBindingSource1
-            // 
-            this.tipoStickerBindingSource1.DataSource = typeof(StickerBoard.Factory.StickerFactory.TipoSticker);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,14 +248,11 @@ namespace StickerBoard.Forms
             this.Name = "Form1";
             this.Text = "StickerBoard";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLienzo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoStickerBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,8 +277,5 @@ namespace StickerBoard.Forms
         private System.Windows.Forms.Label lblCantFiguras;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.BindingSource tipoStickerBindingSource;
-        private System.Windows.Forms.BindingSource tipoStickerBindingSource1;
-        private System.Windows.Forms.BindingSource tipoStickerBindingSource2;
     }
 }
