@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
+using System.Windows.Forms;
 
 namespace StickerBoard
 {
@@ -32,5 +33,6 @@ namespace StickerBoard
 
         // Cada subclase debe implementar cómo se dibuja usando Graphics
         public abstract void Dibujar(Graphics g, int posX, int posY, int tamaño, Color color);
+        public abstract bool Validar(int posX, int posY, int tamaño, PictureBox pbLienzo);
     }
 }
