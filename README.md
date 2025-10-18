@@ -30,39 +30,39 @@ Para la interfaz de usuario se utilizaron los siguientes controles:
 
   + En el panel izquierdo existe la posibilidad para el usuario de cambiar el tipo de figura (Apartado "Tipo de figura")
 
-  ![alt text](images/image-1.png)
+    ![ComboBox para seleccionar el tipo de figura](images/image-1.png)
 
-  Tiene opción de escoger un rectángulo o un círculo. Todas estas figuras son de proporciones predefinidas, por lo que, por ejemplo, el rectángulo siempre tendrá una proporción de tamaño ancho/alto de 2:1 y el círculo de 1:1.
+    Tiene opción de escoger un rectángulo, un círculo, una estrella o una nube. Todas estas figuras son de proporciones predefinidas, por lo que, por ejemplo, el rectángulo siempre tendrá una proporción de tamaño ancho/alto de 2:1 y el círculo de 1:1.
 
-  + También se puede cambiar la posición en el lienzo usando los dos NumberUpDown X y Y.
+  + Se puede cambiar la posición en el lienzo usando los dos NumberUpDown X y Y.
 
-  ![alt text](images/image-2.png)
+    ![NumberUpDowns para seleccionar posición](images/image-2.png)
   
-  Un detalle es que la posición definida de la figura escogida siempre será la esquina superior izquierda de la misma. No es necesario usar los pequeños botones, pues también está habilitada la opción de escritura para más agilidad.
+    Un detalle es que la posición definida de la figura escogida siempre será la esquina superior izquierda de la misma. No es necesario usar los pequeños botones, pues también está habilitada la opción de escritura para más agilidad.
 
   + También está la opción de cambiar el tamaño:
 
-  ![alt text](images/image-3.png)
+    ![NumberUpDown para seleccionar tamaño](images/image-3.png)
 
-  Es más de lo mismo que con la posición, recordando que todas las figuras tienen proporciones predefinidas.
+    Es más de lo mismo que con la posición, recordando que todas las figuras tienen proporciones predefinidas.
 
   + Para cambiar el color solo es necesario dar click en la PictureBox roja:
 
-  ![alt text](images/image-4.png)
+    ![PictureBox para seleccionar color](images/image-4.png)
 
-  Esto desplegará un menú de selección de color:
+    Esto desplegará un menú de selección de color:
 
-  ![alt text](images/image-5.png)
+    ![Menú de selección de color](images/image-5.png)
 
-  Cuando clickees "Aceptar", se asignará el escogido a la nueva figura que vas a crear.
+    Cuando clickees "Aceptar", se asignará el escogido a la nueva figura que vas a crear.
 
 + Cuando hayas terminado de configurar tu sticker, solo necesitas darle al boton ```Crear```. Esto pegará el sticker en el lienzo.
 
   + Para ver la cantidad de stickers que hay en el lienzo se  tiene la siguiente TextBox:
 
-  ![Panel de interfaz que muestra la etiqueta Cantidad de stickers: y un cuadro de texto de solo lectura con el valor 0. Parte de una ventana de Windows Forms con fondo claro que indica el número de stickers en el lienzo. Texto en la imagen: Cantidad de stickers: 0. Tono neutro e informativo.](images/image-6.png)
+    ![TextBox que muestra la cantidad de stickers](images/image-6.png)
 
-  Ella se actualiza automáticamente cada que se añade una figura, por eso está en modo solo lectura.
+    Ella se actualiza automáticamente cada que se añade una figura, por eso está en modo solo lectura.
   
 + Por último, se tiene el botón ```Limpiar```, que deja el lienzo en blanco y regresa el estado del contador ```Cantidad de stickers``` a "0".
 
