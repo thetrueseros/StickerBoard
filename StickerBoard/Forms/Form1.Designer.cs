@@ -49,6 +49,7 @@ namespace StickerBoard.Forms
             this.lblCantFiguras = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.lblLienzo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSize)).BeginInit();
@@ -220,11 +221,21 @@ namespace StickerBoard.Forms
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // lblLienzo
+            // 
+            this.lblLienzo.AutoSize = true;
+            this.lblLienzo.Location = new System.Drawing.Point(695, 55);
+            this.lblLienzo.Name = "lblLienzo";
+            this.lblLienzo.Size = new System.Drawing.Size(38, 13);
+            this.lblLienzo.TabIndex = 17;
+            this.lblLienzo.Text = "Lienzo";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.lblLienzo);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblCantFiguras);
             this.Controls.Add(this.lblColor);
@@ -277,5 +288,6 @@ namespace StickerBoard.Forms
         private System.Windows.Forms.Label lblCantFiguras;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private Label lblLienzo;
     }
 }

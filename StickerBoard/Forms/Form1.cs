@@ -60,8 +60,8 @@ namespace StickerBoard.Forms
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            pbLienzo.Invalidate();
             txtContador.Text = "0";
+            pbLienzo.Invalidate();
         }
     }
 }

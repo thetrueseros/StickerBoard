@@ -25,12 +25,13 @@ namespace StickerBoard.Entities
         }
         public override bool Validar(int posX, int posY, int tamaño, PictureBox pbLienzo)
         {
+            /// Validar que el sticker quepa en el lienzo
             if (posX < 0 || posY < 0 ||
                 posX + (tamaño * 2) > 858 /*ancho del lienzo*/ ||
                 posY + tamaño > 487 /*alto del lienzo*/)
             {
-                MessageBox.Show("Su sticker es muy grande." +
-                    "El sticker DEBE caber entero en el lienzo.", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Su sticker se sale de los límites del lienzo." +
+                    "El sticker DEBE caber entero en él.", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
