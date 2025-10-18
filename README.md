@@ -22,7 +22,7 @@ Para la interfaz de usuario se utilizaron los siguientes controles:
 ## Ejecución
 
 + Ejecutar StickerBoard:
-    Cuando se ejecuta StickerBoard, aparece la interfaz con todos los controles distribuídos y listos para usar.![alt text](images\image.png)
+    Cuando se ejecuta StickerBoard, aparece la interfaz con todos los controles distribuídos y listos para usar. ![alt text](images\image.png)
 + Seleccionar tipo, posición, tamaño y color:
   + En el panel izquierdo existe la posibilidad para el usuario de cambiar el tipo de figura (Apartado "Tipo de figura") 
     ![alt text](images\image-1.png) 
