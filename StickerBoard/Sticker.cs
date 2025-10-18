@@ -22,24 +22,15 @@ namespace StickerBoard
         public Color Color => color;
 
         // Constructor principal usado por Factory
-        protected Sticker(int posX, int posY, int tamaño, Color color)
+        public Sticker(int posX, int posY, int tamaño, Color color)
         {
-            if (tamaño <= 0) throw new ArgumentOutOfRangeException(nameof(tamaño), "El tamaño debe ser mayor que cero.");
             this.posX = posX;
             this.posY = posY;
             this.tamaño = tamaño;
             this.color = color;
         }
 
-        // Helper: rectángulo que ocupa el sticker.
-        // Aquí se decide que posX,posY son el centro de la figura.
-        protected Rectangle GetBounds()
-        {
-            int half = tamaño / 2;
-            return new Rectangle(posX - half, posY - half, tamaño, tamaño);
-        }
-
         // Cada subclase debe implementar cómo se dibuja usando Graphics
-        public abstract void Dibujar(Graphics g);
+        public abstract void Dibujar(Graphics g, int posX, int posY, int tamaño, Color color);
     }
 }
